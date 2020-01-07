@@ -8,7 +8,7 @@ pipeline {
 
    parameters {
 
-       choice choices:['QA','PreUser','Radhe'],description:'This is parameter project',name:'ENVIRONMENT'
+       choice choices:['QA','PreUser'],description:'This is parameter project',name:'ENVIRONMENT'
    }
 
    stages {
@@ -32,7 +32,7 @@ pipeline {
                     if (ENVIRONMENT == 'QA'){
                        sh 'sshpass -p "QAserver" scp target/Bhavani.war QAserver@172.17.0.2:/home/QAserver/Teast/parameter'
                        sh 'echo "Hi My name is Mangesh"'
-                    } else if (ENVIRONMENT == 'Preuser'){
+                    } else if (ENVIRONMENT == 'PreUser'){
                        sh 'sshpass -p "PreUser" scp target/Bhavani.war PreUser@172.17.0.3:/home/PreUser/Pragati/Parameter'
                        sh 'echo Hi we are in PreUser'
                       }
