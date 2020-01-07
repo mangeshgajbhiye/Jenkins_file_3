@@ -3,10 +3,10 @@ pipeline {
    agent any
 
    triggers {
-     pollscm 'H/2 * * * 1-5'
+     pollSCM 'H/2 * * * 1-5'
    }
 
-   parameter {
+   parameters {
 
        choice choices:['QA','PreUser','Radhe'],description:'This is parameter project',name:'ENVIRONMENT'
    }
