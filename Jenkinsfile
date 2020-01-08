@@ -45,6 +45,9 @@ pipeline {
    
    post {
          always{
+           mail to:'mangesh.gajbhiye23@gmail.com,mangeshmaddy0@gmail.com',
+                subject:'Abaut Build ${env.BUILD_NUMBER}',
+                body:'Biuld is success${env.JOB_NAME} ${env.BUILD_URL}'
            sh'echo "mail OK"'
          }
    }
