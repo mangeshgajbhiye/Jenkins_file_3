@@ -46,7 +46,7 @@ pipeline {
    post {
          always{
            mail to:'mangesh.gajbhiye23@gmail.com,mangeshmaddy0@gmail.com',
-                subject:'$JOB_NAME',
+                subject:'JOB_NAME',
                 body:'Biuld is success'
            sh'echo "mail OK"'
          }
