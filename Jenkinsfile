@@ -45,7 +45,7 @@ pipeline {
    
    post {
          always{
-             mail to:'mangesh.gajbhiye23@gmail.com,sagarnalawade4@gmail.com'
+             mail to:'mangesh.gajbhiye23@gmail.com'
                  subject:'Failed pipeline:${currentBuild.fullDisplayName}'
                  body:'${env.BUILD_URL}'
              sh'echo "mail OK"'
